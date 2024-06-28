@@ -20,23 +20,21 @@ void addition(int num_elements)
 }
 void subtraction(int num_elements)
 {
-	printf("Enter the %d elements for addition:\n",num_elements);
-	int arr[num_elements];
-	int i;
-	for(i=0;i<num_elements;i++)
-	{
-		scanf("%d",&arr[i]);
-		
-	}
-	int result=0;
-	for(i=num_elements;i>0;i--)
-	{
-		result=arr[i]-result;
-
-	}
-	printf("\nThe result is %d\n",result);
-	
+    printf("Enter the %d elements for Subtraction:\n", num_elements);
+    int arr[num_elements];
+    int i;
+    for (i=0;i<num_elements;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int result=arr[0];
+    for (i=1;i<num_elements;i++)
+    {
+        result-=arr[i];
+    }
+    printf("\nThe result is %d\n",result);
 }
+
 void multiplication(int num_elements)
 {
 	printf("Enter the %d elements for multiplication:\n",num_elements);
@@ -76,7 +74,7 @@ int division(int num_elements)
 		if(arr[i]==0)
 		{
 			printf("division by zero is not possible");
-			break;
+			return 1;
 		}
 		result/=arr[i];
 	}
